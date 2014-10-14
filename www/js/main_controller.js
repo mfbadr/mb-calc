@@ -12,6 +12,8 @@
     };
     $scope.number = function(num){
       if($scope.display === '0' && num !== '.'){
+        //just make a different decimal function
+        //should check if there is already a decimal in display
         $scope.display = num.toString();
       }else{
         $scope.display += num;
