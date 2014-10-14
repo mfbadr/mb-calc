@@ -6,15 +6,44 @@ html
     title
     // compiled css output
     link(href='css/ionic.app.css', rel='stylesheet')
+    link(href='css/style.css', rel='stylesheet')
     // ionic/angularjs js
     script(src='lib/ionic/js/ionic.bundle.js')
     // cordova script (this will be a 404 during development)
     script(src='cordova.js')
     // your app's js
     script(src='js/app.js')
-  body(ng-app='mb-calc')
-    ion-pane
-      ion-header-bar.bar-stable
-        h1.title Mikey's Calculator
-      ion-content
-        h3 Mobile-first development!
+    script(src='js/main_controller.js')
+  body(ng-app='mb-calc', ng-controller='MainCtrl')
+    .bar.bar-header.bar-calm
+      h1.title {{title}}
+    ion-content.has-header
+      .display {{display}}
+      .button-bar
+        a.button(ng-click='number(7)') 7
+        a.button(ng-click='number(8)') 8
+        a.button(ng-click='number(9)') 9
+        a.button +
+      .button-bar
+        a.button(ng-click='number(4)') 4
+        a.button(ng-click='number(5)') 5
+        a.button(ng-click='number(6)') 6
+        a.button -
+      .button-bar
+        a.button(ng-click='number(1)') 1
+        a.button(ng-click='number(2)') 2
+        a.button(ng-click='number(3)') 3
+        a.button *
+      .button-bar
+        a.button(ng-click='number(0)') 0
+        a.button(ng-click='number(".")') .
+        a.button =
+        a.button /
+      .button-bar
+        a.button(ng-click='clear()') C
+        a.button
+        a.button
+        a.button
+    .bar.bar-footer.bar-royal
+      .title
+        small &copy; 2014 Mikey Badr

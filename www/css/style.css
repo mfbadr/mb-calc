@@ -1,1 +1,7 @@
 /* Empty. Add your own CSS if you like */
+.display{
+
+  margin: 5px;
+  font-size: 30px;
+  text-align: right;
+}
