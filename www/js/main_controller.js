@@ -72,6 +72,7 @@
             $scope.display = $scope.result.toString();
             break;
         }
+        //deal with floating point error
         $scope.currentOp = null;
         $scope.tempDisplay = '';
 
